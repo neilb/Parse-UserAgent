@@ -14,6 +14,11 @@ ok(defined($ua = $parser->parse('Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus
     && $ua->name eq 'Chrome'
     && $ua->version eq '18.0.1025.133'
     && $ua->version->major == 18
-    && $ua->version->minor == 0,
-    'Chrome 18 on Android 4.0.4');
+    && $ua->version->minor == 0
+    && $ua->os eq 'Android 4.0.4'
+    && $ua->os->name eq 'Android'
+    && $ua->os->version eq '4.0.4'
+    && $ua->os->version->major == 4
+    && $ua->os->version->minor == 0
+    ,'Chrome 18 on Android 4.0.4');
 
