@@ -13,6 +13,7 @@ use overload
                 return $result;
              };
 
+has raw     => ( is => 'ro');
 has name    => ( is => 'ro');
 has version => ( is => 'ro');
 
